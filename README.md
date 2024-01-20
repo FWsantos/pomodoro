@@ -61,7 +61,7 @@ To clone and run this application, you'll need [Git](https://git-scm.com) and [N
 $ git clone https://github.com/FWsantos/pomodoro.git
 
 # Go into the repository
-$ cd electron-markdownify
+$ cd pomodoro
 
 # Install dependencies
 $ npm install
