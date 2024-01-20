@@ -68,6 +68,8 @@ async function createWindow() {
     win.loadFile(indexHtml)
   }
 
+  win.setMenuBarVisibility(false)
+
   // Test actively push message to the Electron-Renderer
   win.webContents.on('did-finish-load', () => {
     win?.webContents.send('main-process-message', new Date().toLocaleString())
