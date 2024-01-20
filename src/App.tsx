@@ -13,7 +13,7 @@ function App() {
 
   const countTypeToTime = {
     'pomodoro': 1500,
-    'short-break': 5,
+    'short-break': 300,
     'long-break': 900,
   };
 
