@@ -26,6 +26,9 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v3
 
+      - name: Verify Icon
+        run: test -f public/favicon_512.ico || echo "Icon not found!"
+
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
