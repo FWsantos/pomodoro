@@ -67,7 +67,7 @@ $ cd pomodoro
 $ npm install
 
 # Run the app
-$ npm start
+$ npm run dev
 ```
 
 > **Note**
@@ -80,20 +80,14 @@ You can [download](https://github.com/amitmerchant1990/electron-markdownify/rele
 
 ## Emailware
 
-Markdownify is an [emailware](https://en.wiktionary.org/wiki/emailware). Meaning, if you liked using this app or it has helped you in any way, I'd like you send me an email at <bullredeyes@gmail.com> about anything you'd want to say about this software. I'd really appreciate it!
+Markdownify is an [emailware](https://en.wiktionary.org/wiki/emailware). Meaning, if you liked using this app or it has helped you in any way, I'd like you send me an email at <bullredeyes@gmail.com> about anything you'd want to say about this software. I'd really appreciate it! -->
 
 ## Credits
 
-This software uses the following open source packages:
-
-- [Electron](http://electron.atom.io/)
-- [Node.js](https://nodejs.org/)
-- [Marked - a markdown parser](https://github.com/chjj/marked)
-- [showdown](http://showdownjs.github.io/showdown/)
-- [CodeMirror](http://codemirror.net/)
-- Emojis are taken from [here](https://github.com/arvida/emoji-cheat-sheet.com)
-- [highlight.js](https://highlightjs.org/)
-
+<!-- This software uses the following open source packages: -->
+- Template used in the project: [electron-vite-react](https://github.com/electron-vite/electron-vite-react)
+- Sounds by [pixabay-1](https://pixabay.com/pt/users/pixabay-1/)
+<!-- 
 ## Related
 
 [markdownify-web](https://github.com/amitmerchant1990/markdownify-web) - Web version of Markdownify
