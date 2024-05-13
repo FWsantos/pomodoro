@@ -1,10 +1,8 @@
 import { useEffect, useState } from 'react'
 import './App.css'
 import AlarmSound from './assets/alarm-clock-short-6402.mp3';
-
-interface TimerType {
-  type: 'pomodoro' | 'short-break' | 'long-break';
-}
+import { TimerType } from './store/interfaces';
+import Button from './components/Button';
 
 function App() {
   const [count, setCount] = useState(1500)
@@ -106,37 +104,37 @@ function App() {
   return (
     <div className='App'>
       <div className='options'>
-        <button
-          className={countType.type === 'pomodoro' ? 'selected' : ''}
+        <Button
+          selected={countType.type === 'pomodoro'}
           onClick={() => handleCountTypeChange({ type: 'pomodoro' })}
         >
           Pomodoro
-        </button>
-        <button
-          className={countType.type === 'short-break' ? 'selected' : ''}
+        </Button>
+        <Button
+          selected={countType.type === 'short-break'}
           onClick={() => handleCountTypeChange({ type: 'short-break' })}
         >
           Short Break
-        </button>
-        <button
-          className={countType.type === 'long-break' ? 'selected' : ''}
+        </Button>
+        <Button
+          selected={countType.type === 'long-break'}
           onClick={() => handleCountTypeChange({ type: 'long-break' })}
         >
           Long Break
-        </button>
+        </Button>
       </div>
       <div className='timer'>
         <p>{formatTime(count)}</p>
       </div>
       <div className='buttons'>
-        <button
+        <Button
           onClick={handleStartPause}>
           {isActive ? 'Pause' : 'Start'}
-        </button>
+        </Button>
 
-        <button onClick={() => reset()}>
+        <Button onClick={() => reset()}>
           Reset
-        </button>
+        </Button>
       </div>
     </div>
   )

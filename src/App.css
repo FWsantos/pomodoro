@@ -13,21 +13,8 @@
 
 }
 
-button {
-  width: 100%;
-  font-size: 24px;
-  padding: 8px;
-  border-radius: 4px;
-  border: 1px solid #ccc;
-  cursor: pointer;
-}
-
 .options button {
   width: auto;
-}
-
-button.selected {
-  border: 2px solid #ccc;
 }
 
 .timer {

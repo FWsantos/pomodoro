@@ -1,0 +1,14 @@
+button {
+    width: 100%;
+    font-size: 24px;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+
+button.selected {
+    border: 2px solid #FF9F66;
+    background-color: #FF9F66;
+    color: #FFFAE6;
+}
