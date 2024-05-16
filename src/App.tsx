@@ -81,7 +81,7 @@ function App() {
     audio.pause();
   }
 
-  function handleStartPause() {
+  function handlePlay() {
     if (count === 0) {
       reset();
     } else {
@@ -116,10 +116,10 @@ function App() {
           Long Break
         </Button>
       </div>
-      <Timer count={count} />
+      <Timer count={count} handlePlay={handlePlay} />
       <div className='buttons'>
         <Button
-          onClick={handleStartPause}>
+          onClick={handlePlay}>
           {isActive ? 'Pause' : 'Start'}
         </Button>
 

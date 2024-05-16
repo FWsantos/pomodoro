@@ -2,18 +2,27 @@ import './Timer.css';
 
 type TimerProps = {
     count: number;
+    handlePlay: () => void;
 };
 
-const formatTime = (time: number) => {
-    const minutes = Math.floor(time / 60)
-    const seconds = time % 60
+function Timer({ count, handlePlay }: TimerProps) {
 
-    return `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`
-}
+    const formatTime = (time: number) => {
+        const minutes = Math.floor(time / 60)
+        const seconds = time % 60
 
-function Timer({ count }: TimerProps) {
+        return `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`
+    }
+
+    const handleClick = () => {
+        console.log('Timer clicked')
+        handlePlay();
+    }
+
+
+
     return (
-        <div className='timer'>
+        <div className='timer' onClick={handleClick}>
             <p>{formatTime(count)}</p>
         </div>
     );
