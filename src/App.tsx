@@ -2,7 +2,8 @@ import { useEffect, useState } from 'react'
 import './App.css'
 import AlarmSound from './assets/alarm-clock-short-6402.mp3';
 import { TimerType } from './store/interfaces';
-import Button from './components/Button';
+import Button from './components/Button/Button';
+import Timer from './components/Timer/Timer';
 
 function App() {
   const [count, setCount] = useState(1500)
@@ -80,15 +81,7 @@ function App() {
     audio.pause();
   }
 
-
-  const formatTime = (time: number) => {
-    const minutes = Math.floor(time / 60)
-    const seconds = time % 60
-
-    return `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`
-  }
-
-  function handleStartPause() {
+  function handlePlay() {
     if (count === 0) {
       reset();
     } else {
@@ -123,12 +116,10 @@ function App() {
           Long Break
         </Button>
       </div>
-      <div className='timer'>
-        <p>{formatTime(count)}</p>
-      </div>
+      <Timer count={count} handlePlay={handlePlay} />
       <div className='buttons'>
         <Button
-          onClick={handleStartPause}>
+          onClick={handlePlay}>
           {isActive ? 'Pause' : 'Start'}
         </Button>
 
